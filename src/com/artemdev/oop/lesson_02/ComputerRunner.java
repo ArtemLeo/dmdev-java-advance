@@ -10,7 +10,8 @@ public class ComputerRunner {
         computer2.printState();
 
         Computer computer3 = new Computer(10000, 10000);
-        computer3.load(true);
+        boolean value = true;
+        computer3.load(value);
         computer3.printState();
     }
 }

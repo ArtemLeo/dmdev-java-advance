@@ -1,14 +1,14 @@
 package com.artemdev.oop.lesson_02;
 
 public class Computer {
-    int ssd = 500;
-    long ram = 0;
+    private int ssd = 500;
+    private long ram = 0;
 
     public Computer() {
         System.out.println("Я был создан!");
     }
 
-    public Computer(int ssd) {
+    public Computer(int ssd)  {
         this.ssd = ssd;
     }
 
@@ -22,7 +22,9 @@ public class Computer {
     }
 
     void load(boolean value) {
-        System.out.println("Я загрузился с одним параметром!");
+        if (value) {
+            System.out.println("Я загрузился с одним параметром!");
+        }
     }
 
     void printState() {
