@@ -10,11 +10,10 @@ package com.artemdev.oop.lesson_04;
 
 public class TimeIntervalRunner {
     public static void main(String[] args) {
-        TimeInterval timeInterval1 = new TimeInterval(30, 2, 1);
-        int totalSeconds = timeInterval1.totalSeconds();
-        System.out.println(totalSeconds);
+        TimeInterval timeInterval1 = createTimeInterval();
 
-        TimeInterval timeInterval2 = new TimeInterval(totalSeconds);
+
+        TimeInterval timeInterval2 = new TimeInterval(timeInterval1.totalSeconds());
         System.out.println(timeInterval2.totalSeconds());
 
         timeInterval1.showInfo();
@@ -22,5 +21,11 @@ public class TimeIntervalRunner {
 
         TimeInterval sumIntervals = timeInterval1.sum(timeInterval2);
         sumIntervals.showInfo();
+    }
+
+    private static TimeInterval createTimeInterval() {
+        TimeInterval timeInterval1 = new TimeInterval(30, 2, 1);
+        System.out.println(timeInterval1.totalSeconds());
+        return timeInterval1;
     }
 }
